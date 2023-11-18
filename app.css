@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: rgba(49, 21, 132, 0.678);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400%7CInconsolata:400');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* :root {
+    /* Current Website Colors */
+--one: #3C6255;
+--two: #61876E;
+--three: #A6BB8D;
+--four: #EAE7B1;
+/* COLORS  */
+/* primary */
+--primary-0: #f0efff;
+--primary-50: #d8d6ff;
+--primary-100: #c1beff;
+--primary-200: #aaa5ff;
+--primary-300: #938dff;
+--primary-400: #7b74ff;
+/* main */
+--primary-500: #645cff;
+--primary-600: #554ed9;
+--primary-700: #4640b3;
+--primary-800: #37338c;
+--primary-900: #282566;
+--primary-1000: #191740;
+--primary-1100: #0a0919;
+/* grey */
+--grey-0: #fafbfc;
+--grey-50: #f2f4f8;
+--grey-100: #eaedf3;
+--grey-200: #e2e7ef;
+--grey-300: #dbe0ea;
+--grey-400: #d3dae6;
+--grey-500: #cbd3e1;
+--grey-600: #adb3bf;
+--grey-700: #8e949e;
+--grey-800: #70747c;
+--grey-900: #51545a;
+--grey-1000: #333538;
+--grey-1100: #141516;
+/* green */
+--green-0: #e7fae8;
+--green-50: #aeeca5;
+--green-100: #71f25a;
+--green-200: rgb(21, 183, 35);
+--green-300: #0ee051;
+--green-400: #11c83f;
+--green-500: #269943;
+--green-600: #0c7d34;
+--green-700: #24781d;
+--green-800: #0b7405;
+--green-900: #0c2c12;
+
+/* rest */
+--black: #222;
+--white: #fff;
+--red-light: #f8d7da;
+--red-dark: #842029;
+--green-light: #d1e7dd;
+--green-dark: #0f5132;
+
+/* typography */
+--headingFont: 'Inconsolata',
+monospace;
+--bodyFont: 'Montserrat',
+sans-serif;
+--smallText: 0.7em;
+/* rest */
+--backgroundColor: var(--grey-50);
+--textColor: var(--grey-1000);
+--borderRadius: 0.25rem;
+--letterSpacing: 1px;
+--transition: 0.3s ease-in-out all;
+--max-width: 1120px;
+--fixed-width: 600px;
+/* box shadows */
+--shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+0 1px 2px 0 rgba(0, 0, 0, 0.06);
+--shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+0 4px 6px -2px rgba(0, 0, 0, 0.05);
+--shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+*/ html {
+    /* font-size: 112.5%; */
+}
+
+body {
+    background: url("./samantha-gades-BlIhVfXbi9s-unsplash.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    color: var(--textColor);
+    font-family: var(--bodyFont);
+    /* font-weight: 400; */
+    /* line-height: 1.75; */
+}
+
+p {
+    /* margin-bottom: 1.5rem; */
+    /* max-width: 40em; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    /* margin-bottom: 1.38rem; */
+    font-family: var(--headingFont);
+    /* font-weight: 400; */
+    /* line-height: 1.3; */
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+    /* font-size: 3.052rem; */
+}
+
+h2 {
+    /* font-size: 2.441rem; */
+}
+
+h3 {
+    /* font-size: 1.953rem; */
+}
+
+h4 {
+    /* font-size: 1.563rem; */
+}
+
+h5 {
+    /* font-size: 1.25rem; */
+}
+
+small,
+.text-small {
+    font-size: var(--smallText);
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*************
+     Buttons 
+*************/
+
+.btn {
+    cursor: pointer;
+    appearance: none;
+    color: var(--white);
+    background: var(--primary-500);
+    border: none;
+    border-radius: var(--borderRadius);
+    letter-spacing: var(--letterSpacing);
+    /* padding: 0.375rem 0.75rem; */
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    text-transform: capitalize;
+}
+
+.btn:hover {
+    color: var(--white);
+    background: var(--primary-700);
+    box-shadow: var(--shadow-2);
+}
+
+button.small {
+    /* padding: 0.25rem 0.5rem; */
+    font-size: var(--smallText);
+}
+
+/* zoo template */
+@font-face {
+    font-family: "a";
+    src: url(./fonts/Roller\ Bubble.ttf);
+}
+
+@font-face {
+    font-family: "b";
+    src: url(./fonts/Blackiron.ttf);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(./img/ray-954355_1280.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: rgba(233, 233, 141, 0.352);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.logo span {
+    font-weight: bolder;
+    text-shadow: 0 0 8px cyan;
+    font-family: "a";
+    color: rgba(0, 0, 0, 0.751);
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    background-color: rgba(255, 255, 0, 0.308);
+    padding: 10px 15px;
+    border-radius: 13px;
+    margin: 0 5px;
+    transition: .5s;
+    color: black;
+    font-weight: bolder;
+    font-family: "b";
+    letter-spacing: 2px;
+}
+
+.nav-links a:hover {
+    box-shadow: inset 0 0 10px 2px lightyellow;
+}
+
+.social-links i {
+    margin: 0 5px;
+    font-size: 1.5rem;
+}
+
+#bars {
+    background-color: white;
+    padding: 4px 5px;
+    border-radius: 3px;
+    color: blue;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 100px);
+}
+
+.banner-container {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.banner-container h3,
+h1 {
+    color: white;
+    font-size: 3rem;
+    -webkit-text-stroke: 3px black;
+    font-family: "a";
+    text-shadow: 7px 7px rgba(99, 96, 96, 0.49);
+
+}
+
+.banner-container h1 {
+    font-size: 5rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 30px;
+    box-shadow: 5px 5px 4px black;
+}
+
+section#about {
+    background: url(./img/jellyfish-1838613_1280.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section * {
+    color: white;
+}
+
+section h2 {
+    text-align: center;
+    font-family: "a";
+    width: fit-content;
+    border-bottom: 2px solid white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.flex {
+    display: flex;
+    min-height: 500px;
+    /* flex-wrap: wrap-reverse; */
+}
+
+.about-text,
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#products {
+    background-color: rgba(10, 24, 24, 0.667);
+}
+
+.main-card {
+    display: flex;
+    /* background-color: pink; */
+    min-height: 400px;
+    margin-top: 60px;
+    /* gap: 20px; */
+    flex-wrap: wrap;
+}
+
+#products .card {
+    flex: 1 1 20rem;
+    box-shadow: 0 0 3px 3px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#products .card img {
+    margin-top: 20px;
+}
+
+#products .card p {
+    color: white;
+    font-family: "a";
+    font-size: 40px;
+}
+
+#products .card .a {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+#products .card button {
+    margin-bottom: 20px;
+    color: black;
+    background-color: cyan;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "b";
+    font-weight: bold;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding: 10px 10px;
+}
+
+#products .card button:hover {
+    box-shadow: inset 0 0 5px white;
+}
+
+#products .card div {
+    text-align: center;
+}
+
+#products.card img {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section#services {
+    background-color: rgba(128, 128, 128, 0.782);
+}
+
+#services .card {
+    height: 300px;
+    flex: 1 1 20rem;
+    border: 1px solid white;
+    position: relative;
+    overflow: hidden;
+}
+
+#services .card-text,
+#services .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-text .btn {
+    text-align: center;
+}
+
+.card-text {
+    background: rgb(117, 140, 140);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform: translateX(100%);
+    /* transform: scale(0); */
+    /* transform-origin: top right; */
+
+}
+
+#services .card:hover .card-text {
+    /* transform: scale(1); */
+    transform: translateX(0%);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: none; */
+}
+
+section#contact {
+    background: url(./img/jellyfish-1838613_1280.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#contact .login-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700rem;
+    margin: auto;
+    /* background-color: pink; */
+}
+
+.left {
+    background-color: rgba(0, 0, 0, 0.371);
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.373);
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 300px;
+}
+
+.left h3,
+p {
+    padding: 10px;
+    font-size: 30px;
+}
+
+.icons {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.icons a {
+    margin: 35px;
+}
+
+.right {
+    background-color: rgba(0, 0, 0, 0.371);
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.373);
+    border-radius: 20px;
+    padding: 20px 20px;
+    flex: 1;
+    margin-left: 100px;
+}
+
+.right h4,
+p {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.right p {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.form input,
+textarea {
+    box-shadow: inset 0 0 20px rgba(128, 128, 128, 0.659);
+    border: none;
+    outline-color: rgba(255, 255, 255, 0.711);
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.form textarea {
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px 0 0 10px;
+
+}
+
+.form ::placeholder {
+    color: white;
+}
+
+.two {
+    display: flex;
+    justify-content: space-around;
+}
+
+.two input[type="email"] {
+    margin-right: 10px;
+}
+
+.form input[type="submit"] {
+    background-color: cyan;
+    color: black;
+
+}
+
+.form input[type="submit"]:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+
+/* ....................................................................................................................... */
+
+@media(max-width:600px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .social-links {
+        display: none;
+    }
+
+    #bars {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100px;
+        background-color: rgba(0, 255, 255, 0.086);
+        padding: 30px 100px;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .nav-links a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+
+    }
+
+    #contact .login-form {
+        flex: 1 1 800px;
+    }
+
+
+
+
+}
